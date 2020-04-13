@@ -1,0 +1,41 @@
+.animation {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: #23a6ec;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+
+.cursor-animation {
+  animation: disco 5000ms ease-in-out infinite;
+}
+
+@keyframes disco {
+  0% {
+    filter: hue-rotate(0deg) blur(5rem);
+  }
+  100% {
+    filter: hue-rotate(360deg) blur(5rem);
+  }
+}
+
+.hidden-item {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem 2rem;
+  border: 1px solid #192227;
+  color: #192227;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
