@@ -1,27 +1,26 @@
+const light = document.querySelector(".light");
 const startBtn = document.querySelector(".start-btn");
-// Select DOM elements HINT: 2 of them.
 
 let started = false;
 
 startBtn.addEventListener("click", () => {
   console.log("clicked");
   console.log("started", started);
-  // Log light element and log all of its classes
+  console.log("light", light.classList);
 
   if (started) {
     startBtn.innerText = "START";
-    // Remove 'active' class from light element
-
+    light.classList.remove("active");
     // Todo - Add text inside the light (ON | OFF)
+    light.innerText = "OFF";
+    // TODO - add not-active-class
   } else {
     startBtn.innerText = "STOP";
-    // Add 'active' class to light element
-
+    light.classList.add("active");
     // Todo - Add text inside the light (ON | OFF)
+    light.innerText = "ON";
   }
 
   // Refactor toggle started
   started = !started;
 });
-
-// BONUS -> Add not-active class
